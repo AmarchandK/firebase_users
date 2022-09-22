@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:flutter_user_firebase/app/module/Home/view/home_view.dart';
-import 'package:flutter_user_firebase/app/module/login/controller/create_controller.dart';
+import 'package:flutter_user_firebase/app/module/login/controller/sign_controller.dart';
 import 'package:flutter_user_firebase/app/module/login/view/register_page.dart';
+import 'package:flutter_user_firebase/app/module/Home/view/home_page.dart';
 import 'package:get/get.dart';
-
-import 'widgets/text_forms.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -43,16 +41,17 @@ class LoginPage extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        TextFields(
+                        Fields(
                             icon: CupertinoIcons.mail,
+                            isediting: true.obs,
                             hint: 'Email',
                             validator: 'Enter an Email',
                             cntrlr: emailController,
                             keybord: TextInputType.emailAddress),
-                        TextFields(
+                        Fields(
+                            isediting: true.obs,
                             icon: CupertinoIcons.lock_circle,
                             length: 6,
-                            obscure: true,
                             hint: 'Password',
                             validator: 'Enter your Password',
                             cntrlr: passwordController,
