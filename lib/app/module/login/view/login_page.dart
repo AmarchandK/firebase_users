@@ -53,9 +53,10 @@ class LoginPage extends StatelessWidget {
                             icon: CupertinoIcons.lock_circle,
                             length: 6,
                             hint: 'Password',
+                            obscure: true,
                             validator: 'Enter your Password',
                             cntrlr: passwordController,
-                            keybord: TextInputType.visiblePassword),
+                            keybord: TextInputType.number),
                         const SizedBox(
                           height: 30,
                         ),

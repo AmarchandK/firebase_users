@@ -14,7 +14,6 @@ class AuthService extends GetxController {
         password: password,
       );
     } catch (ex) {
-      
       return Get.snackbar(
         'About User',
         'User Message',

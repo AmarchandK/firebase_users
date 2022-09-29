@@ -1,15 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_user_firebase/app/module/Home/model/home_model.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController ageController = TextEditingController();
-  final TextEditingController mobileControler = TextEditingController();
-
   addToDatabase(Details model) async {
     final CollectionReference users = FirebaseFirestore.instance
         .collection(FirebaseAuth.instance.currentUser!.email.toString());

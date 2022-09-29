@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -126,7 +125,10 @@ class HomeSmple extends StatelessWidget {
                   ],
                 );
               } else {
-                return const CupertinoActivityIndicator();
+                return const Center(
+                    child: CupertinoActivityIndicator(
+                  color: Colors.cyan,
+                ));
               }
             }),
       ),
